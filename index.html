@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Building with AI — Hackathon Workshop</title>
+<title>Building with AI — Wise Marketing Hackathon</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --dark: #0a1628;
-  --dark-mid: #121d33;
-  --teal: #00d4aa;
-  --teal-dim: #00b894;
-  --coral: #ff6b6b;
-  --purple: #a29bfe;
-  --blue: #74b9ff;
-  --light: #f8f9fc;
-  --light-mid: #eef0f6;
-  --text: #1a1a2e;
-  --text-mid: #4a4a6a;
-  --text-light: #8888aa;
-  --gradient: linear-gradient(135deg, #00d4aa 0%, #a29bfe 100%);
+  --dark: #163300;
+  --dark-mid: #1e4400;
+  --teal: #9FE870;
+  --teal-dim: #7BC45A;
+  --coral: #A8200D;
+  --purple: #A0E1E1;
+  --blue: #FFEB69;
+  --light: #f5f7f2;
+  --light-mid: #eaefe4;
+  --text: #0E0F0C;
+  --text-mid: #454745;
+  --text-light: #6A6C6A;
+  --gradient: linear-gradient(135deg, #9FE870 0%, #A0E1E1 100%);
 }
 
 .reveal {
@@ -90,13 +90,22 @@
 }
 
 /* ---- ACCENT TEXT ---- */
-.accent { color: var(--teal); }
+.accent { color: #2F5711; }
 .accent-coral { color: var(--coral); }
-.accent-purple { color: var(--purple); }
+.accent-purple { color: #1a8a8a; }
 .accent-blue { color: var(--blue); }
+.dark-slide .accent { color: var(--teal); }
+.dark-slide .accent-purple { color: var(--purple); }
+.dark-slide .accent-coral { color: #ff8a80; }
 
 /* ---- GRADIENT TEXT ---- */
 .gradient-text {
+  background: linear-gradient(135deg, #2F5711 0%, #1a8a8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark-slide .gradient-text {
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -106,9 +115,9 @@
 /* ---- PILL / TAG ---- */
 .pill {
   display: inline-block;
-  background: var(--gradient);
-  color: white !important;
-  -webkit-text-fill-color: white;
+  background: var(--dark);
+  color: var(--teal) !important;
+  -webkit-text-fill-color: var(--teal);
   font-size: 0.45em;
   font-weight: 600;
   padding: 4px 16px;
@@ -154,7 +163,7 @@
   padding: 2px 8px;
   border-radius: 6px;
   font-size: 0.85em;
-  color: var(--teal-dim);
+  color: #2F5711;
   font-weight: 500;
 }
 .dark-slide code:not(pre code) {
@@ -164,7 +173,7 @@
 
 /* ---- COMMAND BOX ---- */
 .cmd {
-  background: var(--dark);
+  background: #21231D;
   color: var(--teal);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7em;
@@ -178,8 +187,8 @@
 
 /* ---- ANALOGY BOX ---- */
 .analogy {
-  background: linear-gradient(135deg, rgba(0,212,170,0.08), rgba(162,155,254,0.08));
-  border-left: 4px solid var(--teal);
+  background: linear-gradient(135deg, rgba(159,232,112,0.1), rgba(160,225,225,0.1));
+  border-left: 4px solid #2F5711;
   padding: 16px 20px;
   border-radius: 0 12px 12px 0;
   margin: 16px 0;
@@ -202,8 +211,8 @@
   box-shadow: 0 2px 16px rgba(10,22,40,0.06);
 }
 .reveal table thead th {
-  background: var(--dark);
-  color: white;
+  background: #163300;
+  color: #9FE870;
   font-weight: 600;
   padding: 12px 16px;
   border: none;
@@ -263,12 +272,10 @@
 .section-num {
   font-size: 5em;
   font-weight: 900;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--teal) !important;
   line-height: 1;
   margin-bottom: -10px;
+  opacity: 0.6;
 }
 
 /* ---- PROGRESS BAR ---- */
@@ -311,8 +318,8 @@
   font-size: 0.75em;
 }
 .tier-green {
-  background: rgba(0,212,170,0.1);
-  border-left: 4px solid var(--teal);
+  background: rgba(159,232,112,0.12);
+  border-left: 4px solid #2F5711;
 }
 .tier-yellow {
   background: rgba(255,183,77,0.1);
@@ -346,9 +353,9 @@
 <div class="slides">
 
 <!-- ===================== TITLE ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
-    <p class="subtitle" style="font-size:0.7em; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:24px;">Hackathon Workshop</p>
+    <p class="subtitle" style="font-size:0.7em; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:24px;">Wise Marketing Hackathon</p>
     <h1 style="font-size:3.2em; margin-bottom:16px;">Building <span class="gradient-text">with AI</span></h1>
     <p style="font-size:0.75em; color:rgba(255,255,255,0.5); margin-top:24px;">A practical guide to developing projects using AI coding agents</p>
     <p style="font-size:0.55em; color:rgba(255,255,255,0.3); margin-top:40px;">Use <kbd style="background:rgba(255,255,255,0.1); padding:2px 8px; border-radius:4px;">→</kbd> arrow keys to navigate &nbsp;|&nbsp; Press <kbd style="background:rgba(255,255,255,0.1); padding:2px 8px; border-radius:4px;">Esc</kbd> for overview</p>
@@ -383,7 +390,7 @@
 </section>
 
 <!-- ===================== PART 1: SETUP ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <div class="section-num">01</div>
     <h2 style="margin-top:0;">Laptop Setup</h2>
@@ -411,7 +418,7 @@
 </section>
 
 <!-- ===================== PART 2: SKILLS ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <div class="section-num">02</div>
     <h2 style="margin-top:0;">Skills</h2>
@@ -472,7 +479,7 @@
 </section>
 
 <!-- ===================== DEMO: SUPERPOWERS ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <p class="subtitle" style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.6em;">Live Demo</p>
     <h2 style="font-size:2.2em;">Superpowers</h2>
@@ -505,7 +512,7 @@
 </section>
 
 <!-- ===================== DEMO: DOCUMENT SKILLS ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <p class="subtitle" style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.6em;">Live Demo</p>
     <h2 style="font-size:2.2em;">Document Skills</h2>
@@ -531,7 +538,7 @@
 </section>
 
 <!-- ===================== PART 3: DEV CYCLE ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <div class="section-num">03</div>
     <h2 style="margin-top:0;">The AI Development Cycle</h2>
@@ -628,7 +635,7 @@
 </section>
 
 <!-- ===================== PART 4: CONTEXT ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <div class="section-num">04</div>
     <h2 style="margin-top:0;">Context</h2>
@@ -678,7 +685,7 @@
 </section>
 
 <!-- ===================== PART 5: AGENTS.MD ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <div class="section-num">05</div>
     <h2 style="margin-top:0;">agents.md</h2>
@@ -846,7 +853,7 @@
 </section>
 
 <!-- ===================== LIVE DEMO ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <p class="subtitle" style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.6em;">Live Demo</p>
     <h2 style="font-size:2.2em;">Let's Create One Together</h2>
@@ -856,28 +863,32 @@
 
 <section>
   <div class="pill">Live Demo</div>
-  <h2>Step-by-Step</h2>
-  <div style="font-size:0.75em;">
-    <p><strong class="accent">Step 1:</strong> Create the file</p>
-    <div class="cmd" style="font-size:0.9em;">touch AGENTS.md</div>
-    <p><strong class="accent">Step 2:</strong> Add commands</p>
-    <pre><code class="language-markdown">## Commands
-npm install       # Install dependencies
-npm run dev       # Start development server
-npm test          # Run tests</code></pre>
-    <p><strong class="accent">Step 3:</strong> Add boundaries</p>
-    <pre><code class="language-markdown">## Boundaries
+  <h2>Create Your agents.md</h2>
+  <div class="grid-2" style="font-size:0.75em;">
+    <div>
+      <p><strong class="accent">Step 1:</strong> Create the file</p>
+      <div class="cmd" style="font-size:0.9em;">touch AGENTS.md</div>
+      <p><strong class="accent">Step 2:</strong> Add commands</p>
+<pre><code class="language-markdown">## Commands
+npm install   # Install deps
+npm run dev   # Start server
+npm test      # Run tests</code></pre>
+    </div>
+    <div>
+      <p><strong class="accent">Step 3:</strong> Add boundaries</p>
+<pre><code class="language-markdown">## Boundaries
 NEVER DO:
 - Delete existing files
-- Modify .env or secret files
-- Install unvetted dependencies</code></pre>
-    <p><strong class="accent">Step 4:</strong> Create symlinks (if multi-tool)</p>
-    <div class="cmd" style="font-size:0.9em;">ln -s AGENTS.md CLAUDE.md</div>
+- Modify .env or secrets
+- Install unvetted deps</code></pre>
+      <p><strong class="accent">Step 4:</strong> Symlink (multi-tool)</p>
+      <div class="cmd" style="font-size:0.9em;">ln -s AGENTS.md CLAUDE.md</div>
+    </div>
   </div>
 </section>
 
 <!-- ===================== SUMMARY ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <h2 style="font-size:2.4em;">The <span class="gradient-text">Modern AI</span> Dev Workflow</h2>
     <p style="color:rgba(255,255,255,0.5); font-size:0.7em;">Putting it all together</p>
@@ -919,11 +930,11 @@ touch AGENTS.md</code></pre>
 </section>
 
 <!-- ===================== END ===================== -->
-<section data-background-color="#0a1628">
+<section data-background-color="#163300">
   <div class="dark-slide" style="text-align:center;">
     <h1 style="font-size:3em;">Let's <span class="gradient-text">Build</span></h1>
     <p style="color:rgba(255,255,255,0.5); font-size:0.8em; margin-top:24px;">Time to start your hackathon project</p>
-    <p style="color:rgba(255,255,255,0.3); font-size:0.55em; margin-top:40px;">Made with AI · March 2026</p>
+    <p style="color:rgba(255,255,255,0.3); font-size:0.55em; margin-top:40px;">Wise Marketing Hackathon · March 2026</p>
   </div>
 </section>
 
