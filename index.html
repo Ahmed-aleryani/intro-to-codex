@@ -345,6 +345,53 @@
 @media (max-width: 768px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .reveal h1 { font-size: 2em; }
+  .slide-controls { bottom: 12px; right: 12px; gap: 6px; }
+  .ctrl-btn { width: 36px; height: 36px; font-size: 14px; }
+}
+
+/* ---- SLIDE CONTROLS ---- */
+.slide-controls {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+}
+
+.ctrl-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(22, 51, 0, 0.85);
+  color: #9FE870;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.ctrl-btn:hover {
+  background: rgba(22, 51, 0, 1);
+  transform: scale(1.05);
+}
+
+.ctrl-btn:active {
+  transform: scale(0.95);
+}
+
+.ctrl-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(159, 232, 112, 0.2);
 }
 </style>
 </head>
@@ -377,6 +424,10 @@
     <div class="card">
       <h3 style="margin-top:0;"><span class="accent">3.</span> The AI Dev Cycle</h3>
       <p class="small muted" style="margin:0;">Plan, Execute, Review — the dual loop</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;"><span class="accent">3.5</span> Good Prompts</h3>
+      <p class="small muted" style="margin:0;">Examples for planning, commanding, and reviewing</p>
     </div>
     <div class="card">
       <h3 style="margin-top:0;"><span class="accent">4.</span> Context</h3>
@@ -595,6 +646,104 @@
   <div class="card" style="margin-top:20px; text-align:center; background:var(--light);">
     <p style="margin:0; font-size:0.8em;"><strong>You are the architect. The AI is the builder.</strong><br>
     <span class="muted">You decide <em>what</em> to build. The AI figures out <em>how</em> — including fixing its own mistakes.</span></p>
+  </div>
+</section>
+
+<!-- ===================== PART 3.5: GOOD PROMPTS ===================== -->
+<section data-background-color="#163300">
+  <div class="dark-slide" style="text-align:center;">
+    <p class="subtitle" style="letter-spacing:0.08em; text-transform:uppercase; font-size:0.6em;">Practical Reference</p>
+    <h2 style="font-size:2.4em;">Writing <span class="gradient-text">Good Prompts</span></h2>
+    <p style="color:rgba(255,255,255,0.5); font-size:0.7em;">What to say when planning, commanding, and reviewing</p>
+  </div>
+</section>
+
+<section>
+  <div class="pill">Good Prompts</div>
+  <h2>1. Planning Prompts</h2>
+  <p class="small muted">Use these <strong>before you start</strong> — get the AI to think before it writes a single line of code.</p>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Ask for a plan first</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Before writing any code, create a detailed plan for building a landing page that captures email sign-ups. Break it into numbered steps and list any files you'll create. Don't start coding until I approve the plan."</p>
+  </div>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Explore options first</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"I want to add a contact form to our website. Give me 3 different approaches with pros and cons for each. Don't implement anything yet — I want to choose the approach first."</p>
+  </div>
+  <div class="card" style="background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Clarify before building</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"I need a social media dashboard. Ask me any questions you need answered before starting — I want to make sure we build the right thing."</p>
+  </div>
+</section>
+
+<section>
+  <div class="pill">Good Prompts</div>
+  <h2>2. Execution / Task Prompts</h2>
+  <p class="small muted">Use these when <strong>giving Codex a specific task</strong>. Be concrete — include context, constraints, and the outcome you want.</p>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Specific feature request</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Add a dark mode toggle to the navbar in <code>src/components/Navbar.jsx</code>. Save the preference to localStorage so it persists on page reload. Don't change any other files."</p>
+  </div>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Constrained task</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Refactor the <code>fetchUser()</code> function to handle errors properly. Only modify that one function — don't touch anything else. Show me what changed when you're done."</p>
+  </div>
+  <div class="card" style="background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Content / copy task</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Write the homepage hero section copy for a Wise marketing campaign targeting small business owners. Give me a headline, subheadline, and a call-to-action button label. Tone: confident and friendly, not corporate."</p>
+  </div>
+</section>
+
+<section>
+  <div class="pill">Good Prompts</div>
+  <h2>3. Review &amp; Debug Prompts</h2>
+  <p class="small muted">Use these after Codex finishes — to <strong>check, verify, or fix</strong> its work before you accept it.</p>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Ask it to verify</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Before declaring done, run the tests and show me the output. Only tell me it's complete if all tests pass."</p>
+  </div>
+  <div class="card" style="margin-bottom:10px; background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Debug a specific error</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"I'm seeing this error: <em>[paste error here]</em>. Don't fix it yet — first tell me what you think is causing it and what you'll change. I'll confirm before you make any changes."</p>
+  </div>
+  <div class="card" style="background:var(--light);">
+    <p class="smaller" style="margin:0 0 4px;"><strong class="accent">Review before accepting</strong></p>
+    <p class="smaller muted" style="margin:0; font-style:italic;">"Summarise everything you changed and why. Walk me through each file you modified so I can follow along before I decide to keep your changes."</p>
+  </div>
+</section>
+
+<section>
+  <div class="pill">Good Prompts</div>
+  <h2>The Prompt Formula</h2>
+  <p class="small muted">Good prompts follow a simple pattern — the more you include, the better the output:</p>
+  <div class="grid-2" style="margin-top:12px;">
+    <div>
+      <div class="tier tier-green" style="margin-bottom:8px;">
+        <h4 class="accent" style="font-size:0.9em !important;">Context</h4>
+        <p class="smaller" style="margin:0;">Where are we? What file, what feature, what goal?</p>
+      </div>
+      <div class="tier tier-green" style="margin-bottom:8px;">
+        <h4 class="accent" style="font-size:0.9em !important;">Task</h4>
+        <p class="smaller" style="margin:0;">What exactly do you want done?</p>
+      </div>
+      <div class="tier tier-green">
+        <h4 class="accent" style="font-size:0.9em !important;">Constraints</h4>
+        <p class="smaller" style="margin:0;">What should it <em>not</em> touch? Any limits?</p>
+      </div>
+    </div>
+    <div>
+      <div class="tier tier-green" style="margin-bottom:8px;">
+        <h4 class="accent" style="font-size:0.9em !important;">Format</h4>
+        <p class="smaller" style="margin:0;">Should it plan first? Show steps? Ask questions?</p>
+      </div>
+      <div class="tier tier-green">
+        <h4 class="accent" style="font-size:0.9em !important;">Verification</h4>
+        <p class="smaller" style="margin:0;">How do you want it to prove it worked?</p>
+      </div>
+      <div class="card" style="margin-top:8px; text-align:center; background:var(--light);">
+        <p class="smaller muted" style="margin:0;"><strong>Tip:</strong> If you're unsure, end with<br><em>"Ask me if you need anything clarified."</em></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -859,6 +1008,29 @@ touch AGENTS.md</code></pre>
 </div>
 </div>
 
+<!-- Floating controls: prev / next / fullscreen -->
+<div class="slide-controls" id="slideControls">
+  <button class="ctrl-btn" id="btnPrev" title="Previous slide" aria-label="Previous slide">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <button class="ctrl-btn" id="btnNext" title="Next slide" aria-label="Next slide">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" id="btnFullscreen" title="Toggle fullscreen" aria-label="Toggle fullscreen">
+    <svg id="iconEnter" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 5V2H5M11 2H14V5M14 11V14H11M5 14H2V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg id="iconExit" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+      <path d="M5 2V5H2M14 5H11V2M11 14V11H14M2 11H5V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
 <script>
@@ -874,6 +1046,52 @@ Reveal.initialize({
   center: false,
   plugins: [RevealHighlight]
 });
+
+// --- Controls wiring ---
+document.getElementById('btnPrev').addEventListener('click', () => Reveal.prev());
+document.getElementById('btnNext').addEventListener('click', () => Reveal.next());
+
+const btnFs = document.getElementById('btnFullscreen');
+const iconEnter = document.getElementById('iconEnter');
+const iconExit = document.getElementById('iconExit');
+
+function updateFsIcon() {
+  const isFs = !!document.fullscreenElement;
+  iconEnter.style.display = isFs ? 'none' : '';
+  iconExit.style.display  = isFs ? ''     : 'none';
+}
+
+btnFs.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+});
+document.addEventListener('fullscreenchange', updateFsIcon);
+
+// --- Auto-hide controls after 3s of no mouse movement ---
+const controls = document.getElementById('slideControls');
+let hideTimer = null;
+
+function showControls() {
+  controls.style.opacity = '1';
+  controls.style.pointerEvents = 'auto';
+  clearTimeout(hideTimer);
+  hideTimer = setTimeout(() => {
+    controls.style.opacity = '0';
+    controls.style.pointerEvents = 'none';
+  }, 3000);
+}
+
+// Add transition for smooth fade
+controls.style.transition = 'opacity 0.4s ease';
+
+document.addEventListener('mousemove', showControls);
+document.addEventListener('touchstart', showControls, { passive: true });
+
+// Hide immediately on load (shows briefly then hides)
+showControls();
 </script>
 </body>
 </html>
