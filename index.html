@@ -429,53 +429,24 @@
 <section>
   <div class="pill">Part 2</div>
   <h2>What Are Skills?</h2>
-  <p>Ready-made instruction packages that teach your AI assistant how to do new things.</p>
-  <div class="analogy">If your AI assistant is a new employee, skills are the training manuals you hand them on day one.</div>
-  <ul style="margin-top:16px;">
-    <li>Written in simple text format (Markdown)</li>
-    <li><strong>Work across different AI tools</strong> — not locked to one product</li>
-    <li>Installed with a single command</li>
-  </ul>
-</section>
-
-<section>
-  <div class="pill">Part 2</div>
-  <h2>How to Install Skills</h2>
-  <p class="small muted">One command. That's all it takes:</p>
-  <div class="cmd">npx skills add &lt;skill-name&gt;</div>
-  <h3 style="margin-top:28px;">Three Types of Skills</h3>
-  <div class="grid-3">
+  <p class="small">Ready-made instruction packages that teach your AI new abilities. Install once, it just knows.</p>
+  <div class="analogy">If your AI is a new employee, skills are the training manuals you hand them on day one.</div>
+  <div class="cmd" style="margin-top:16px;">npx skills add &lt;skill-name&gt;</div>
+  <div class="grid-3" style="margin-top:12px;">
     <div class="card" style="text-align:center;">
-      <h4 class="accent" style="margin:0 0 6px;">Community</h4>
-      <p class="smaller muted" style="margin:0;">Built by developers worldwide, shared openly</p>
+      <h4 class="accent" style="margin:0 0 4px;">Community</h4>
+      <p class="smaller muted" style="margin:0;">Built by developers worldwide</p>
     </div>
     <div class="card" style="text-align:center;">
-      <h4 class="accent-purple" style="margin:0 0 6px;">Official</h4>
-      <p class="smaller muted" style="margin:0;">Built by AI tool companies like Anthropic</p>
+      <h4 class="accent-purple" style="margin:0 0 4px;">Official</h4>
+      <p class="smaller muted" style="margin:0;">By AI tool companies</p>
     </div>
     <div class="card" style="text-align:center;">
-      <h4 class="accent-coral" style="margin:0 0 6px;">Personal</h4>
-      <p class="smaller muted" style="margin:0;">Custom skills for your team or workflow</p>
+      <h4 class="accent-coral" style="margin:0 0 4px;">Personal</h4>
+      <p class="smaller muted" style="margin:0;">Custom for your team</p>
     </div>
   </div>
-</section>
-
-<section>
-  <div class="pill">Part 2</div>
-  <h2>The Agent Skills Standard</h2>
-  <p>An <strong>open standard</strong> — not owned by any single company.</p>
-  <p class="small muted">Originally created by Anthropic, now supported across the industry.</p>
-  <div class="card" style="margin-top:20px; text-align:center;">
-    <p style="font-size:0.8em; margin:0; color:var(--text-mid);">
-      <strong>One skill works everywhere:</strong><br>
-      Codex &nbsp;·&nbsp; Claude Code &nbsp;·&nbsp; Cursor &nbsp;·&nbsp; GitHub Copilot &nbsp;·&nbsp; Gemini CLI
-    </p>
-  </div>
-  <h3 style="margin-top:24px;">Where to Find Skills</h3>
-  <ul>
-    <li><strong>skills.sh</strong> — The main directory for browsing skills</li>
-    <li><strong>github.com/VoltAgent/awesome-agent-skills</strong> — 1,000+ curated skills</li>
-  </ul>
+  <p class="smaller muted" style="margin-top:12px;"><strong>Open standard</strong> — works across Codex, Claude Code, Cursor, Copilot, Gemini CLI. Browse at <strong>skills.sh</strong></p>
 </section>
 
 <!-- ===================== DEMO: SUPERPOWERS ===================== -->
@@ -489,24 +460,17 @@
 
 <section>
   <div class="pill">Demo</div>
-  <h2>What is Superpowers?</h2>
-  <p class="small muted">A popular skills collection that teaches your AI professional development habits — planning, testing, debugging, and verifying before declaring "done."</p>
-  <div class="analogy">If regular AI coding is like having a fast but careless intern, Superpowers turns it into a methodical senior developer.</div>
-  <p class="small muted" style="margin-top:12px;"><strong>Created by:</strong> Jesse Vincent (open-source developer)<br><strong>Status:</strong> Accepted into the official Claude Code marketplace</p>
-</section>
-
-<section>
-  <div class="pill">Demo</div>
-  <h2>Install Superpowers</h2>
+  <h2>Superpowers</h2>
+  <p class="small muted">Teaches your AI professional dev habits. <em>By Jesse Vincent · In the official Claude Code marketplace.</em></p>
   <div class="cmd">npx skills add obra/superpowers</div>
-  <table style="margin-top:16px;">
-    <thead><tr><th>What It Does</th><th>In Plain English</th></tr></thead>
+  <table style="margin-top:12px;">
+    <thead><tr><th>Skill</th><th>What It Does</th></tr></thead>
     <tbody>
-      <tr><td><strong>brainstorming</strong></td><td>Asks questions to refine your idea before coding</td></tr>
-      <tr><td><strong>writing-plans</strong></td><td>Breaks your project into small, manageable tasks</td></tr>
-      <tr><td><strong>test-driven-development</strong></td><td>Writes tests first, then code to pass them</td></tr>
-      <tr><td><strong>systematic-debugging</strong></td><td>Investigates root cause instead of guessing</td></tr>
-      <tr><td><strong>verification-before-completion</strong></td><td>Verifies everything works before declaring done</td></tr>
+      <tr><td><strong>brainstorming</strong></td><td>Refines your idea before coding</td></tr>
+      <tr><td><strong>writing-plans</strong></td><td>Breaks work into small tasks</td></tr>
+      <tr><td><strong>test-driven-development</strong></td><td>Tests first, then code</td></tr>
+      <tr><td><strong>systematic-debugging</strong></td><td>Root cause instead of guessing</td></tr>
+      <tr><td><strong>verification</strong></td><td>Verifies before declaring done</td></tr>
     </tbody>
   </table>
 </section>
@@ -645,37 +609,13 @@
 
 <section>
   <div class="pill">Part 4</div>
-  <h2>What is Context?</h2>
-  <p>Everything the AI can "see" and remember during a conversation.</p>
-  <div class="analogy">Think of it as the AI's desk — it can only work with what's currently on the desk.</div>
-  <div class="grid-2" style="margin-top:20px;">
-    <div class="card" style="border-top:4px solid var(--coral);">
-      <h3 class="accent-coral" style="margin-top:0;">Too Little Context</h3>
-      <ul>
-        <li>AI forgets what it was doing</li>
-        <li>Contradicts earlier work</li>
-        <li>Breaks things it built before</li>
-      </ul>
-    </div>
-    <div class="card" style="border-top:4px solid #ffb74d;">
-      <h3 style="margin-top:0; color:#ffb74d;">Too Much Context</h3>
-      <ul>
-        <li>Gets overwhelmed</li>
-        <li>Slower, more expensive</li>
-        <li>Quality actually goes <em>down</em></li>
-      </ul>
-    </div>
+  <h2>Context — The AI's Working Memory</h2>
+  <p class="small muted">Everything the AI can "see" during a conversation — like its desk. Too little and it forgets; too much and quality drops.</p>
+  <div class="card" style="text-align:center; padding:20px; background:var(--light); margin:16px 0;">
+    <p style="font-size:1em; margin:0;"><strong>Golden Rule: Keep each task focused on one clear thing.</strong></p>
   </div>
-</section>
-
-<section>
-  <div class="pill">Part 4</div>
-  <h2>The Golden Rule</h2>
-  <div class="card" style="text-align:center; padding:32px; background:var(--light); margin-bottom:24px;">
-    <p style="font-size:1.1em; margin:0;"><strong>Keep each task focused on one clear thing.</strong></p>
-  </div>
-  <div class="analogy">If you're asking a contractor to fix your kitchen faucet, you don't hand them the blueprints for the entire building. You show them the kitchen.</div>
-  <h3 style="margin-top:24px;">Practical Tips</h3>
+  <div class="analogy">Asking a contractor to fix your faucet? Show them the kitchen, not the blueprints for the entire building.</div>
+  <h3 style="margin-top:16px;">Practical Tips</h3>
   <ul>
     <li><strong>Start fresh conversations</strong> for new features</li>
     <li><strong>Reference specific files</strong> instead of "look at everything"</li>
@@ -696,31 +636,18 @@
 <section>
   <div class="pill">Part 5</div>
   <h2>What is agents.md?</h2>
-  <p>A simple text file at the root of your project — a <strong>rulebook written for AI assistants</strong>.</p>
-  <div class="analogy">Imagine onboarding a new team member. Instead of explaining the same rules every morning, you write them down once. That's agents.md — but for AI.</div>
-  <ul style="margin-top:16px;">
-    <li>Just a regular text file (Markdown format)</li>
-    <li>No special software needed</li>
-    <li>Adopted by <strong>60,000+ projects</strong> worldwide</li>
-  </ul>
-</section>
-
-<section>
-  <div class="pill">Part 5</div>
-  <h2>A Brief History</h2>
-  <div style="position:relative; padding-left:30px; margin-top:20px;">
+  <p class="small">A text file at your project root — a <strong>rulebook for AI assistants</strong>. Used by 60,000+ projects.</p>
+  <div class="analogy">Instead of explaining the same rules to your AI every session, write them down once.</div>
+  <div style="position:relative; padding-left:30px; margin-top:16px;">
     <div style="position:absolute; left:12px; top:0; bottom:0; width:3px; background:var(--gradient); border-radius:2px;"></div>
-    <div style="margin-bottom:24px;">
-      <p style="margin:0;"><strong class="accent">August 2025</strong></p>
-      <p class="small muted" style="margin:4px 0 0;">OpenAI introduced the standard alongside their Codex tool</p>
+    <div style="margin-bottom:16px;">
+      <p style="margin:0;"><strong class="accent">Aug 2025</strong> <span class="small muted">— OpenAI introduced the standard with Codex</span></p>
     </div>
-    <div style="margin-bottom:24px;">
-      <p style="margin:0;"><strong class="accent-purple">December 2025</strong></p>
-      <p class="small muted" style="margin:4px 0 0;">Donated to the Linux Foundation — no single company controls it</p>
+    <div style="margin-bottom:16px;">
+      <p style="margin:0;"><strong class="accent-purple">Dec 2025</strong> <span class="small muted">— Donated to the Linux Foundation (neutral governance)</span></p>
     </div>
     <div>
-      <p style="margin:0;"><strong class="accent-coral">Today</strong></p>
-      <p class="small muted" style="margin:4px 0 0;">Collaborative effort: OpenAI, Google, GitHub, Cursor, and many others</p>
+      <p style="margin:0;"><strong class="accent-coral">Today</strong> <span class="small muted">— Backed by OpenAI, Google, GitHub, Cursor, and many others</span></p>
     </div>
   </div>
 </section>
@@ -897,36 +824,27 @@ NEVER DO:
 
 <section>
   <h2>The Complete Workflow</h2>
-  <table>
-    <thead><tr><th>Step</th><th>What You Do</th><th>What the AI Does</th></tr></thead>
-    <tbody>
-      <tr><td><strong>Setup</strong></td><td>Install tools</td><td>Configures your environment</td></tr>
-      <tr><td><strong>Skills</strong></td><td>Install relevant skills</td><td>Loads specialized knowledge</td></tr>
-      <tr><td><strong>agents.md</strong></td><td>Write rules once</td><td>Follows them every session</td></tr>
-      <tr><td><strong>Plan</strong></td><td>Describe the task</td><td>Breaks it into steps</td></tr>
-      <tr><td><strong>Execute</strong></td><td>Approve the plan</td><td>Builds it (inner loop runs)</td></tr>
-      <tr><td><strong>Review</strong></td><td>Check output</td><td>Waits for feedback</td></tr>
-      <tr><td><strong>Repeat</strong></td><td>Next task</td><td>Starts the cycle again</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h2>Quick Reference</h2>
-  <pre><code class="language-bash"># Install Codex
-brew install codex
-
-# Install Superpowers (dev workflow skills)
+  <div class="grid-2">
+    <table>
+      <thead><tr><th>Step</th><th>You</th><th>AI</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Setup</strong></td><td>Install tools</td><td>Configures env</td></tr>
+        <tr><td><strong>Skills</strong></td><td>Install skills</td><td>Loads knowledge</td></tr>
+        <tr><td><strong>Rules</strong></td><td>Write agents.md</td><td>Follows them</td></tr>
+        <tr><td><strong>Plan</strong></td><td>Describe task</td><td>Breaks into steps</td></tr>
+        <tr><td><strong>Execute</strong></td><td>Approve plan</td><td>Builds it</td></tr>
+        <tr><td><strong>Review</strong></td><td>Check output</td><td>Waits for you</td></tr>
+      </tbody>
+    </table>
+    <div>
+      <h3 style="margin-top:0;">Quick Reference</h3>
+<pre style="font-size:0.9em;"><code class="language-bash">brew install codex
 npx skills add obra/superpowers
-
-# Install Anthropic Document Skills
 npx skills add anthropics/skills
-
-# Browse installed skills
 npx skills list
-
-# Create your project rules file
 touch AGENTS.md</code></pre>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== END ===================== -->
